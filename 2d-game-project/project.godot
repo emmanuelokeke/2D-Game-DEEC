@@ -11,9 +11,6 @@ config_version=5
 [application]
 
 config/name="2d game project"
-<<<<<<< HEAD
 run/main_scene="uid://ccly4xcjkyvdf"
-=======
->>>>>>> 9a330af (first commit)
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
