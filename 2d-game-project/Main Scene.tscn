@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcyuh1eq11rqt"]
+
+[ext_resource type="Script" uid="uid://dyow0lhmn2bqm" path="res://MainMenu.gd" id="1_nxxrv"]
+[ext_resource type="Texture2D" uid="uid://b8jjchpl2jqpg" path="res://BACKGROUND.jpeg" id="2_2uwcf"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 1024.0
+texture = ExtResource("2_2uwcf")
+stretch_mode = 6
+
+[node name="Main Menu (Control)" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nxxrv")
+
+[node name="CenterContainer" type="CenterContainer" parent="Main Menu (Control)"]
+layout_mode = 1
+offset_right = 1147.0
+offset_bottom = 652.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu (Control)/CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Main Menu (Control)/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "TIMEJUMP (working title)"
+
+[node name="PlayButton" type="Button" parent="Main Menu (Control)/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "PLAY"
