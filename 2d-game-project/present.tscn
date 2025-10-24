@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://m3hil2r2br5r"]
+[gd_scene load_steps=5 format=3 uid="uid://m3hil2r2br5r"]
+
+[ext_resource type="Texture2D" uid="uid://d1w0m55400iaw" path="res://Present/city.png" id="1_svm2c"]
+[ext_resource type="Script" uid="uid://b63f7cd0qsbwi" path="res://present.gd" id="1_t87ex"]
+[ext_resource type="Script" uid="uid://b53t1n1ytv2au" path="res://canvas_layer.gd" id="2_hdxfg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ylp3"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="SecondaryScene" type="Node2D"]
+script = ExtResource("1_t87ex")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+script = ExtResource("2_hdxfg")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+layout_direction = 4
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 1663.3529
+offset_bottom = 654.0
+texture = ExtResource("1_svm2c")
+expand_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 318)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-30.000002, 469.00003)
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_5ylp3")
+animation = &"new_animation"
+centered = false
